@@ -20,15 +20,15 @@ saveData();
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
-        saveDate();
+        saveData();
     }
     else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
-        saveDate();
+        saveData();
     }
 }, false);
 
-function saveDate(){
+function saveData(){
     localStorage.setItem("data",listContainer.innerHTML);
 }
 
